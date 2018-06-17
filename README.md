@@ -3,6 +3,7 @@ An educational project to implement all the algorithms from Anany Levitin's *[In
 
 ## Algorithms finished
 - Selection sort
+- Insertion sort
 
 ## Algorithms to do
 Brute force and exhaustive search
@@ -12,7 +13,6 @@ Brute force and exhaustive search
 - Breadth-first search
 
 Decrease-and-conquer
-- Insertion sort
 - Topological sorting
 - Binary search
 

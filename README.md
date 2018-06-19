@@ -1,6 +1,8 @@
 # Algorithms in Rust
 An educational project to implement all the algorithms from Anany Levitin's *[Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811)* in Rust.
 
+I took up this project for personal self-improvement, but it could also be useful to anyone learning algorithms, Rust or (ideally) both. The code is mostly well-commented and well-tested, but since I'm still new to Rust it is not brimming with cutting-edge best practices either. Each algorithm includes a brief explanation of how it works and an analysis of its asymptotic complexity.
+
 ## Algorithms finished
 - Selection sort
 - Insertion sort

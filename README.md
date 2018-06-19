@@ -4,10 +4,10 @@ An educational project to implement all the algorithms from Anany Levitin's *[In
 ## Algorithms finished
 - Selection sort
 - Insertion sort
+- Closest pair (by brute force)
 
 ## Algorithms to do
 Brute force and exhaustive search
-- Closest pair (by brute force)
 - Convex hull (by brute force)
 - Depth-first search
 - Breadth-first search

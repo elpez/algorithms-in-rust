@@ -1,4 +1,4 @@
-#[derive(Eq, Debug)]
+#[derive(Eq, Debug, Hash)]
 pub struct Point {
     pub x: i32,
     pub y: i32,

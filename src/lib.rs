@@ -1,17 +1,19 @@
-pub mod insertion_sort;
-pub mod selection_sort;
 pub mod closest_pair;
 pub mod convex_hull;
+pub mod insertion_sort;
+pub mod linear_search;
+pub mod selection_sort;
 
 #[cfg(test)]
 mod tests {
     use std::collections::HashSet;
 
-    use selection_sort::selection_sort;
-    use insertion_sort::insertion_sort;
     use closest_pair::closest_pair_brute_force;
     use closest_pair::Point;
     use convex_hull::convex_hull_brute_force;
+    use insertion_sort::insertion_sort;
+    use linear_search::linear_search;
+    use selection_sort::selection_sort;
 
     #[test]
     fn test_selection_sort() {
@@ -31,6 +33,39 @@ mod tests {
     #[test]
     fn test_convex_hull_brute_force() {
         test_convex_hull_helper(convex_hull_brute_force);
+    }
+
+    #[test]
+    fn test_linear_search() {
+        let numbers = vec![8, 3, 6, 2, 1];
+
+        let mut result = linear_search(&numbers, 6);
+        assert!(result.is_some());
+        assert_eq!(result.unwrap(), 2);
+
+        result = linear_search(&numbers, 8);
+        assert!(result.is_some());
+        assert_eq!(result.unwrap(), 0);
+
+        result = linear_search(&numbers, 1);
+        assert!(result.is_some());
+        assert_eq!(result.unwrap(), 4);
+
+        result = linear_search(&numbers, 100);
+        assert!(result.is_none());
+
+        let strings = vec!["hello", "world"];
+
+        result = linear_search(&strings, "hello");
+        assert!(result.is_some());
+        assert_eq!(result.unwrap(), 0);
+
+        result = linear_search(&strings, "world");
+        assert!(result.is_some());
+        assert_eq!(result.unwrap(), 1);
+
+        result = linear_search(&strings, "goodbye");
+        assert!(result.is_none());
     }
 
     fn test_sorting_helper(sortf: fn(&mut [i32])) {
